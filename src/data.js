@@ -6,7 +6,6 @@
 
 export const COMPANY = {
   name: "G&S Resources Industries Pvt. Ltd.",
-  short: "G&S Resources",
   tagline: "Industrial Hardware, Electrical & Automation Supplies",
   phone: "7988427451",
   phoneDisplay: "+91 79884 27451",
