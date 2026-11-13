@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------
 //  Saara website content yahin se control hota hai.
 //  Naya product add karna ho to bas neeche list mein ek line jodo.
-//  AI product photos are stored in public/products/ai/ by product-name.
+//  Product JPGs are in public/products/; selected photos are in public/products/ai/.
 // ---------------------------------------------------------------
 
 export const COMPANY = {
@@ -23,7 +23,7 @@ export const publicAssetPath = (path) =>
   `${import.meta.env.BASE_URL}${encodeURI(path.replace(/^\/+/, ""))}`;
 
 export const productImagePath = (name) =>
-  publicAssetPath(`products/ai/${name
+  publicAssetPath(`products/${name
     .toLowerCase()
     .replace(/&/g, "and")
     .replace(/[^a-z0-9]+/g, "-")
@@ -34,10 +34,10 @@ export const CATEGORIES = [
     id: "hardware",
     title: "Hardware & Industrial",
     icon: "Wrench",
-    image: publicAssetPath("products/hardware.png"),
+    image: publicAssetPath("products/hardware.jpg"),
     blurb: "Fasteners, bearings, soldering and everyday shop-floor essentials.",
     items: [
-      { name: "Lead Free Solder Wire" },
+      { name: "Lead Free Solder Wire", image: publicAssetPath("products/ai/lead-free-solder-wire.jpg") },
       { name: "Silver Lead Solder Wire" },
       { name: "Low Temp Tin Bismuth Solder Wire", note: "Sn42Bi58" },
       { name: "Soldering Guns & Irons", note: "Electric, SMD rework, butane" },
@@ -47,21 +47,21 @@ export const CATEGORIES = [
       { name: "Circlips" },
       { name: "Cotter Pins" },
       { name: "Threaded Rod" },
-      { name: "Anchors / Rawl Plugs" },
+      { name: "Anchors / Rawl Plugs", image: publicAssetPath("products/ai/anchors-rawl-plugs.jpg") },
       { name: "Hose Clamps" },
       { name: "Cable Ties" },
-      { name: "Allen Bolts / Socket Screws" },
-      { name: "Bearings" },
+      { name: "Allen Bolts / Socket Screws", image: publicAssetPath("products/ai/allen-bolts-socket-screws.jpg") },
+      { name: "Bearings", image: publicAssetPath("products/ai/bearings.jpg") },
     ],
   },
   {
     id: "electrical",
     title: "Electrical Items",
     icon: "Zap",
-    image: publicAssetPath("products/electrical.png"),
+    image: publicAssetPath("products/electrical.jpg"),
     blurb: "Switchgear, control gear, wiring accessories and power supplies.",
     items: [
-      { name: "MCB" },
+      { name: "MCB", image: publicAssetPath("products/ai/mcb.jpg") },
       { name: "MCCB" },
       { name: "Contactors" },
       { name: "Overload Relays", note: "Thermal, 0.1 - 12.5A" },
@@ -88,7 +88,7 @@ export const CATEGORIES = [
     id: "pneumatic",
     title: "Pneumatic & Hydraulic",
     icon: "Cog",
-    image: publicAssetPath("products/pneumatic-hydraulic.png"),
+    image: publicAssetPath("products/pneumatic-hydraulic.jpg"),
     blurb: "Cylinders and fittings for automation and machinery.",
     items: [
       { name: "Pneumatic Cylinders" },
@@ -100,7 +100,7 @@ export const CATEGORIES = [
     id: "sensors",
     title: "Electronic Sensors",
     icon: "Radar",
-    image: publicAssetPath("products/sensors.png"),
+    image: publicAssetPath("products/sensors.jpg"),
     blurb: "Detection and sensing solutions for automation lines.",
     items: [
       { name: "Photoelectric Sensors" },

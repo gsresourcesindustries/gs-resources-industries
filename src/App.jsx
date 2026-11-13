@@ -33,7 +33,7 @@ function Navbar() {
       <div className="container nav__inner">
         <a href="#home" className="brand" onClick={() => setOpen(false)}>
           <img
-            src={publicAssetPath("logo/Gemini_Generated_Image_f4as0uf4as0uf4as.png")}
+            src={publicAssetPath("logo/logo-optimized.png")}
             alt="G&S Resources logo"
             className="brand__logo"
           />
@@ -187,7 +187,7 @@ function Footer() {
         <div>
           <div className="brand brand--footer">
             <img
-              src={publicAssetPath("logo/Gemini_Generated_Image_f4as0uf4as0uf4as.png")}
+              src={publicAssetPath("logo/logo-optimized.png")}
               alt="G&S Resources logo"
               className="brand__logo"
             />

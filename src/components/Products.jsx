@@ -95,6 +95,7 @@ export default function Products() {
                       src={item.image || productImagePath(item.name)}
                       alt={item.name}
                       loading="lazy"
+                      decoding="async"
                       onError={(event) => {
                         event.currentTarget.onerror = null;
                         event.currentTarget.src = cat.image;
